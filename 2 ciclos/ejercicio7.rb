@@ -13,10 +13,8 @@
  par
 =end
 
-a = 10
+a = 11
 a.times do |i|
-  puts i
-  if i.even?
-    puts 'par'
-  end
+  next if i == 0
+  puts i.even? ? 'par' : i
 end

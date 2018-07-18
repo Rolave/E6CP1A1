@@ -24,3 +24,20 @@ Generar el código para imprimir la siguiente tabla:
   <tbody>
  </table>
 =end
+table = ''
+while table == ""
+  table += "<table>\n"
+  table += "  <tbody>\n"
+  4.times do |x|
+    x += 1
+    table += "    <tr>\n"
+    for i in 1..4 do
+      table += "      <td> #{i * x} </td>\n"
+    end
+    table += "    </tr>\n"
+  end
+  table += "  </tbody>\n"
+  table += "</table>"
+end
+
+puts table

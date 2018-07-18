@@ -8,11 +8,17 @@
 # <li> hola </li>
 # </ul>
 
-a = 5
+a = 7
 b = ''
 
-a.times do
-  b = "<li> hola </li>\n"
+a.times do |x|
+  if x == 0
+    b += "<ul>\n"
+  elsif x == 6
+    b += "<ul>"
+  else
+    b += "  <li> hola </li>\n"
+  end
 end
 
 puts b
